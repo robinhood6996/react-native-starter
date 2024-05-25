@@ -1,60 +1,22 @@
-import Post from "@/components/Posts/Post";
-import BoxModel from "@/components/practice/BoxModel";
-import {
-  Text,
-  View,
-  Image,
-  ScrollView,
-  Button,
-  Pressable,
-  Modal,
-  Alert,
-} from "react-native";
-const logoImage = require("../assets/images/partial-react-logo.png");
+import Box from "@/components/practice/Box";
+import { View } from "react-native";
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        padding: 10,
-      }}
-    >
-      <ScrollView>
-        <View>
-          <Button
-            title="Check Errors!"
-            onPress={() =>
-              Alert.alert(
-                "API ERROR!",
-                "Error Code: 500, Server not responding!",
-                [
-                  {
-                    text: "OK",
-                    onPress: () => console.log("Ok Pressed"),
-                  },
-                  {
-                    text: "Contact Admin",
-                    onPress: () => console.log("Admin Alert Created!"),
-                  },
-                ]
-              )
-            }
-          />
-        </View>
-        <View style={{ marginTop: 5 }}>
-          <BoxModel />
-        </View>
-        {/* <Post />
-        <Post /> */}
-      </ScrollView>
+    <View style={styles.container}>
+      <Box style={{ backgroundColor: "wheat" }}>Box 1</Box>
+      <Box style={{ backgroundColor: "lightgreen" }}>Box 2</Box>
+      <Box style={{ backgroundColor: "lightblue" }}>Box 3</Box>
+      <Box style={{ backgroundColor: "skyblue" }}>Box 4</Box>
     </View>
   );
 }
 
 const styles = {
-  postParent: {
-    display: "flex",
+  container: {
+    flex: 1,
+    flexDirection: "row-reverse",
+    gap: 4,
+    borderWidth: 6,
+    borderColor: "red",
   },
 };
