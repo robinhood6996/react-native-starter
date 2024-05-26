@@ -1,22 +1,30 @@
 import Box from "@/components/practice/Box";
-import { View } from "react-native";
+import { View, Text, Dimensions } from "react-native";
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Box style={{ backgroundColor: "wheat" }}>Box 1</Box>
-      <Box style={{ backgroundColor: "lightgreen" }}>Box 2</Box>
-      <Box style={{ backgroundColor: "lightblue" }}>Box 3</Box>
-      <Box style={{ backgroundColor: "skyblue" }}>Box 4</Box>
+      <View style={styles.box}>
+        <Text style={styles.text}>Hello!</Text>
+      </View>
     </View>
   );
 }
-
+const { width, height } = Dimensions.get("window");
 const styles = {
   container: {
     flex: 1,
-    flexDirection: "row-reverse",
-    gap: 4,
-    borderWidth: 6,
-    borderColor: "red",
+    backgroundColor: "plum",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  box: {
+    backgroundColor: "lightblue",
+    width: width > 500 ? "70%" : "90%",
+    height: width > 600 ? "60%" : "90%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: width > 500 ? 50 : 24,
   },
 };
