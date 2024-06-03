@@ -20,37 +20,12 @@ export default function Index() {
     navigation.setOptions({ headerShown: false });
   }, [navigation]);
 
-  return (
-    <SafeAreaView style={styles.safeContainer}>
-      <View style={styles.container}>
-        <View style={styles.box}>
-          <Text style={styles.text}>localhost</Text>
-        </View>
-      </View>
-    </SafeAreaView>
-  );
+  return <View style={styles.container}></View>;
 }
 
 const styles = {
   safeContainer: {
     flex: 1,
-    backgroundColor: "plum",
-  },
-  container: {
-    flex: 1,
-    paddingTop: Platform.OS === "android" ? 20 : 0,
-  },
-  box: {
-    padding: 20,
-  },
-  text: {
-    ...Platform.select({
-      ios: {
-        color: "red",
-      },
-      android: {
-        color: "white",
-      },
-    }),
+    backgroundColor: "#f5f5f5",
   },
 };
