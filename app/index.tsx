@@ -27,7 +27,11 @@ export default function Index() {
 }
 
 const styles = {
-  postParent: {
-    display: "flex",
+  container: {
+    flex: 1,
+    flexDirection: "row-reverse",
+    gap: 4,
+    borderWidth: 6,
+    borderColor: "red",
   },
 };
