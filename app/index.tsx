@@ -1,5 +1,3 @@
-import Post from "@/components/Posts/Post";
-import BoxModel from "@/components/practice/BoxModel";
 import {
   Text,
   View,
@@ -22,32 +20,7 @@ export default function Index() {
       }}
     >
       <ScrollView>
-        <View>
-          <Button
-            title="Check Errors!"
-            onPress={() =>
-              Alert.alert(
-                "API ERROR!",
-                "Error Code: 500, Server not responding!",
-                [
-                  {
-                    text: "OK",
-                    onPress: () => console.log("Ok Pressed"),
-                  },
-                  {
-                    text: "Contact Admin",
-                    onPress: () => console.log("Admin Alert Created!"),
-                  },
-                ]
-              )
-            }
-          />
-        </View>
-        <View style={{ marginTop: 5 }}>
-          <BoxModel />
-        </View>
-        {/* <Post />
-        <Post /> */}
+        <Text>localhost</Text>
       </ScrollView>
     </View>
   );
